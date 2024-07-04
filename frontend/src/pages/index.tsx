@@ -1,10 +1,10 @@
 import React from 'react';
-import UserInterface from '../components/UserInterface';
+import Questionary from '../components/Questionary';
 
 const Home: React.FC = () => {
   return (
     <div>
-      <UserInterface backendName="flask" />
+      <Questionary />
     </div>
   );
 }
