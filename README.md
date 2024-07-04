@@ -72,57 +72,6 @@ We used the "Minej/bert-base-personality" model from Hugging Face for Big Five a
 
 - **Locust**: Simulates user activity to test scalability and performance.
 
-### Deployment
-
-The application is live and accessible at the following URL: [Web Application](http://ad0b4043cf0c74a9d99733004f9ad7bd-66423231.us-east-1.elb.amazonaws.com/)
-The Locust testing interface is available at: [Locust Interface](http://a97b3a6e06cec478b87ac8e494c4b948-978139299.us-east-1.elb.amazonaws.com:8089/)
-
-### Project Structure
-
-```
-.
-├── Kubernetes
-│   ├── db-deployment.yaml
-│   ├── flask-deployment.yaml
-│   ├── locust-configmap.yaml
-│   ├── locust-deployment.yaml
-│   ├── next-deployment.yaml
-│   ├── persistent-volume-claim.yaml
-│   └── persistent-volume.yaml
-├── backend
-│   ├── api.py
-│   ├── app.py
-│   ├── datasets
-│   ├── migrations
-│   ├── models.py
-│   ├── requirements.txt
-│   ├── flask.dockerfile
-│   ├── compose.yml
-│   ├── alembic.ini
-│   ├── env.py
-│   ├── script.py.mako
-│   └── versions
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── public
-│   ├── styles
-│   ├── next-env.d.ts
-│   ├── next.config.js
-│   ├── next.dockerfile
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── tailwind.config.ts
-│   ├── tsconfig.json
-│   └── README.md
-├── testing
-│   ├── locustfile.py
-│   └── questionsAndOptions.json
-├── 5-big-traits-career.xlsx
-└── MBTI-career.xlsx
-```
-
 ### Issues and Challenges
 
 1. **AWS Student Account Limitations**: Faced limitations on creating users for EKS, leading to unexpected costs.
@@ -173,26 +122,6 @@ kubectl apply -f Kubernetes/next-deployment.yaml
 ```bash
 kubectl get pods -n my-app
 kubectl get svc -n my-app
-```
-
-### Environment Variables
-
-#### Backend Configuration (`/backend/.env`)
-
-```plaintext
-DATABASE_URL=postgresql://postgres:postgres@db-service:5432/postgres
-```
-
-#### Frontend Configuration (`/frontend/.env.local`)
-
-```plaintext
-NEXT_PUBLIC_API_URL=http://a11043d4ebd004509aa9a413be69311b-689262011.us-east-1.elb.amazonaws.com:4000
-```
-
-### Connectivity Test
-
-```bash
-wget -qO- http://a11043d4ebd004509aa9a413be69311b-689262011.us-east-1.elb.amazonaws.com:4000/health
 ```
 
 ### Results and Analysis
