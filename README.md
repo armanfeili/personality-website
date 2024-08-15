@@ -1,16 +1,10 @@
 # Scalable Personality-Based Career Selection Web Application
 
-This repository hosts the source code and resources for the Scalable Personality-Based Career Selection Web Application, developed using full-stack technologies including Next.js, Flask, PostgreSQL, Docker, Kubernetes, EKS AWS, and Locust. This project was created under the guidance of Professor Emiliano Casalicchio by the following team members:
+This repository hosts the source code and resources for the Scalable Personality-Based Career Selection Web Application, developed using full-stack technologies including Next.js, Flask, PostgreSQL, Docker, Kubernetes, EKS AWS, and Locust. This project was created under the guidance of Professor Emiliano Casalicchio by:
 
 1. **Arman Feili**
    - **Matricola**: 2101835
    - **Email**: feili.2101835@studenti.uniroma1.it
-2. **Milad Torabi**
-   - **Matricola**: 2103454
-   - **Email**: torabi.2103454@studenti.uniroma1.it
-3. **Sohrab Seyyedi Parsa**
-   - **Matricola**: 2101087
-   - **Email**: seyyediparsa.2101087@studenti.uniroma1.it
 
 ## Project Description
 
